@@ -13,7 +13,7 @@ const LoveLetter = () => {
     const [showFullText, setShowFullText] = useState(false);
     const [zoom, setZoom] = useState(0.5); // Start zoom from 0.5
 
-    const zoomTransitionDuration = 7; // Duration for the zoom transition in seconds
+    const zoomTransitionDuration = 5; // Duration for the zoom transition in seconds
 
     const fullText = `As I sit here, the memories of our time together flood my mind like a cascade of emotions. Each moment we shared feels like a cherished gem, illuminating the path of my life with your love.
     Your presence in my world is like a beacon, guiding me through the storms of existence. In your eyes, I find solace, and in your embrace, I discover the warmth of home.
@@ -47,8 +47,8 @@ const LoveLetter = () => {
                     setTextCompleted(true);
                     clearInterval(interval);
                     setShowFullText(true);
-                    setTimeout(() => setShowFullText(false), 3000); // Hide text after 3 seconds
-                    setTimeout(() => setZoom(1.0), 3000); // Start zooming image after 3 seconds
+                    setTimeout(() => setShowFullText(false), 4000); // Hide text after 3 seconds
+                    setTimeout(() => setZoom(1.0), 4000); // Start zooming image after 3 seconds
                     return prev;
                 }
             });
@@ -144,7 +144,7 @@ const LoveLetter = () => {
                                     <motion.div
                                         initial={{ scale: 0.5 }} // Initial scale set to 0.5
                                         animate={{ scale: zoom }}
-                                        transition={{ duration: zoomTransitionDuration, type: 'spring', stiffness: 100, damping: 20 }}
+                                        transition={{ duration: zoomTransitionDuration, ease: "easeInOut" }}
                                         className="relative z-10"
                                     >
                                         <img

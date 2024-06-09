@@ -93,7 +93,7 @@ With you, I have discovered a love that transcends time and space, a love that i
                                 transition={{ delay: 2, duration: 1 }}
                                 className="text-sm sm:text-lg font-cursive text-purple-700"
                             >
-                                [Rose]
+                                Rose....
                             </motion.p>
                         </motion.div>
                     </div>

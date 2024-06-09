@@ -28,6 +28,8 @@ import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import HomePage from './pages/Home';
 import Page1 from './pages/Page1';
 import Page2 from './pages/Page2';
+import Bday from './pages/Bday';
+
 
 
 const App = () => {
@@ -38,6 +40,8 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/page1" element={<Page1 />} />
         <Route path="/192837465" element={<Page2 />} />
+        <Route path="/bday" element={<Bday />} />
+
 
 
       </Routes>
